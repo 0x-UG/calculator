@@ -22,45 +22,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 let expression = result.value;
                 let operators = ['+', '-', '*', '/'];
 
-        let pureExpression = expression.replace(/[^0-9+\-*/.]/g, '');
+                let pureExpression = expression.replace(/[^0-9+\-*/.]/g, '');
 
-        for (let i = 0; i < operators.length; i++) {
-                pureExpression = pureExpression.replace(operators[i], operators[i] + ' ');
-        }
+                for (let i = 0; i < operators.length; i++) {
+                        pureExpression = pureExpression.replace(operators[i], operators[i] + ' ');
+                }
 
-        let tokens = pureExpression.split(' ');
+                let tokens = pureExpression.split(' ');
 
-        for(let i = 0; i < tokens.length; i++) {
-                if(operators.includes(tokens[i])) {
-                        let operator = tokens[i];
-                        let operand1 = parseFloat(tokens[i - 1]);
-                        let operand2 = parseFloat(tokens[i + 1]);
+                for(let i = 0; i < tokens.length; i++) {
+                        if(operators.includes(tokens[i])) {
+                                let operator = tokens[i];
+                                let operand1 = parseFloat(tokens[i - 1]);
+                                let operand2 = parseFloat(tokens[i + 1]);
 
-                        switch (operator) {
-                                case '+':
-                                        result.value = add(operand1, operand2);
-                                        break;
+                                switch (operator) {
+                                        case '+':
+                                                result.value = add(operand1, operand2);
+                                                break;
 
-                                case '-':
-                                        result.value = subtract(operand1, operand2);
-                                        break;
+                                        case '-':
+                                                result.value = subtract(operand1, operand2);
+                                                break;
 
-                                case '*':
-                                        result.value = multiply(operand1, operand2);
-                                        break;
+                                        case '*':
+                                                result.value = multiply(operand1, operand2);
+                                                break;
                                         
-                                case '/':
-                                        result.value = divide(operand1, operand2);
-                                        break;
+                                        case '/':
+                                                result.value = divide(operand1, operand2);
+                                                break;
 
-                                default:
-                                        result.value = 'Error';
-                                        break;
+                                        default:
+                                                result.value = 'Error';
+                                                break;
+                                        }
+                                break;
                         }
-                        break;
                 }
         }
-        }
+        
         function clear() {
                 result.value = '';
         }
