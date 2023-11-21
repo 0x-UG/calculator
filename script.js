@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 let tokens = pureExpression.split(' ');
 
-                console.log(expression);
-                console.log(pureExpression);
-                console.log(tokens);
-
                 for(let i = 0; i < tokens.length; i++) {
                         if(operators.includes(tokens[i])) {
                                 let operator = tokens[i];
