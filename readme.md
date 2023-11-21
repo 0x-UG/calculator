@@ -6,4 +6,10 @@ The project was built using
 - CSS 
 - JavaScript
 
+The calculator should be able to do the following basic math problems 
+- add 
+- subtract 
+- multiply
+- divide
+
 
