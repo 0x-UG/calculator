@@ -25,10 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 let pureExpression = expression.replace(/[^0-9+\-*/.]/g, '');
 
                 for (let i = 0; i < operators.length; i++) {
-                        pureExpression = pureExpression.replace(operators[i], operators[i] + ' ');
+                        pureExpression = pureExpression.replace(operators[i],' ' + operators[i] + ' ');
                 }
 
                 let tokens = pureExpression.split(' ');
+
+                console.log(expression);
+                console.log(pureExpression);
+                console.log(tokens);
 
                 for(let i = 0; i < tokens.length; i++) {
                         if(operators.includes(tokens[i])) {
@@ -61,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                 }
         }
-        
+
         function clear() {
                 result.value = '';
         }
