@@ -1,0 +1,36 @@
+
+table { 
+        border: 1px solid black; 
+        margin-left: auto; 
+        margin-right: auto;
+    } 
+      
+    input[type="button"] { 
+        width: 100%; 
+        padding: 20px 40px; 
+        background-color: grey; 
+        color: white; 
+        font-size: 24px; 
+        font-weight: bold; 
+        border: none; 
+        border-radius: 5px;
+        height: 120px;
+    } 
+
+    #clear {
+        background-color: orange;
+    }
+
+    #equals {
+        background-color: red;
+    }
+      
+    input[type="text"] { 
+        padding: 20px 30px; 
+        font-size: 24px; 
+        font-weight: bold; 
+        border: none; 
+        border-radius: 5px; 
+        border: 2px solid black; 
+        height: 60px;
+    } 
